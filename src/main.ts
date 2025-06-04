@@ -1,24 +1,45 @@
 import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+const app = document.querySelector("#app") as HTMLDivElement
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+
+// creating a 16x16 grid div using javascript 
+
+
+
+function createDiv() {
+  const div = document.createElement("div")
+  div.className = "grid-item"
+  div.addEventListener("mouseover", () => {
+
+    div.style.backgroundColor = generateRandomColor()
+
+  })
+  return div
+}
+
+
+function generateRandomInt(min: number, max: number) {
+
+  return Math.floor(Math.random() * max) + 1
+
+}
+
+function generateRandomColor() {
+  const r = generateRandomInt(0, 255)
+  const g = generateRandomInt(0, 255)
+  const b = generateRandomInt(0, 255)
+
+  const color = `rgb(${[r, g, b].join(',')})`
+
+  return color
+
+}
+
+
+
+
+for (let i = 0; i < 16 * 16; i++) {
+  const div = createDiv()
+  app.appendChild(div)
+}
