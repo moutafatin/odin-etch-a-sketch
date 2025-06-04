@@ -4,7 +4,12 @@ This is a browser version of something between a sketchpad and an Etch-A-Sketch.
 
 ## Screenshots
 
-![alt text](image.png)
+![Screenshot](screenshots/image.png)
+
+## Built with
+
+- Vite with vanilla TS
+- CSS Flexbox
 
 ## What I learned
 
@@ -17,14 +22,11 @@ This is a browser version of something between a sketchpad and an Etch-A-Sketch.
 
 ## Challenges Faced
 
-- Naming classes and structuring my CSS
-- I still don't understand some weirds behaviors when trying to size Flexbox items.
+- Finding how to calculate the size of each grid item
 
 ## Future Improvements
 
-- Make it fully responsive
-- Better hover effects and adding transitions
-- Applying a CSS convention to name classes and structure the CSS
+- Improve the UI
 
 ## License
 
