@@ -7,6 +7,18 @@
     <title>Etch-a-Sketch</title>
   </head>
   <body>
+    <form class="grid-form">
+      <input
+        class="grid-input"
+        type="number"
+        placeholder="Enter grid size"
+        min="16"
+        max="100"
+        value="16"
+        inputmode="numeric"
+      />
+      <button>Apply</button>
+    </form>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>

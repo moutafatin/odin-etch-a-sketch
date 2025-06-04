@@ -8,7 +8,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-direction: column;
   padding: 1rem;
 }
 
@@ -17,15 +17,27 @@ body {
   flex-wrap: wrap;
   gap: 1px;
   border: 2px solid black;
-  justify-content: center;
-  align-items: stretch;
-  align-content: center;
-  width: 900px;
+  max-width: 900px;
+  width: 100%;
   margin-inline: auto;
 }
 
+.grid-form {
+  margin: 1rem auto;
+  display: flex;
+  gap: 10px;
+  width: 300px;
+}
+
+.grid-input {
+  padding: 0.5rem 1rem;
+  flex-grow: 1;
+}
+
+.grid-form button {
+  padding: 0.5rem 1rem;
+}
+
 .grid-item {
-  background-color: whitesmoke;
-  aspect-ratio: 1/1;
-  flex: 0 0 calc((100% - (15px)) / 16); /* 16 items per row, 15 gaps (15 * 1px) */
+  transition: background-color 0.2s ease;
 }
